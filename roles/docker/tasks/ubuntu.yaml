@@ -1,3 +1,11 @@
+- name: "Working around Ansible lameness..."
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items:
+    - aptitude
 - name: Add Docker GPG key
   apt_key: url=https://download.docker.com/linux/ubuntu/gpg
 - name: Add Docker APT repository
@@ -8,8 +16,6 @@
     name: ['apt-transport-https','ca-certificates','curl','software-properties-common','docker-ce']
     state: present
     update_cache: yes 
-    upgrade: safe
-    cache_valid_time: 3600
 - name: installing pip
   apt: 
     pkg: python3-pip

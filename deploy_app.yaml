@@ -7,7 +7,7 @@
     - docker
   tasks:
     - name: sync docker file dir
-      synchronize: src=/var/lib/jenkins/jobs/Job1/builds/lastSuccessfulBuild/archive/ dest=/tmp
+      synchronize: src=/var/lib/jenkins/jobs/Job1/builds/lastSuccessfulBuild/archive/ dest=/tmp/jenkinspipe
 
     - name: Build an image 
       docker_image:

@@ -1,2 +1,4 @@
-[hosts]
+[staging]
 35.242.187.163 ansible_python_interpreter=/usr/bin/python3
+[production]
+35.246.121.13 ansible_python_interpreter=/usr/bin/python3

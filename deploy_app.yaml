@@ -1,6 +1,6 @@
 ---
 - name: deployment
-#  hosts: hosts
+  hosts: hosts
   remote_user: johannes_esbjornsson
   become: true
   roles: 
